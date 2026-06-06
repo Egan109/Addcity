@@ -1,0 +1,16 @@
+# Netlify config for AdCity
+[build]
+  publish = "."
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "SAMEORIGIN"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "interest-cohort=()"
+
+[[headers]]
+  for = "/ads.txt"
+  [headers.values]
+    Content-Type = "text/plain"
